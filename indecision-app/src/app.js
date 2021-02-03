@@ -12,10 +12,11 @@ const template = (
         </ol>
     </div>
 );
+const username = "Arianna Harwell"
 
 const template2 = (
     <div>
-        <h1>Miguel Coria</h1>
+        <h1>{username}</h1>
         <p>Age: 25</p>
         <p>Location: Houston, Tx</p>
     </div>

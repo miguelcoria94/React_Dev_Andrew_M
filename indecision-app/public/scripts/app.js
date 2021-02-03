@@ -32,6 +32,7 @@ var template = React.createElement(
         )
     )
 );
+var username = "Arianna Harwell";
 
 var template2 = React.createElement(
     "div",
@@ -39,7 +40,7 @@ var template2 = React.createElement(
     React.createElement(
         "h1",
         null,
-        "Miguel Coria"
+        username
     ),
     React.createElement(
         "p",
