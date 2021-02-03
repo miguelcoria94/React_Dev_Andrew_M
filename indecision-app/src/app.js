@@ -4,13 +4,15 @@ console.log("app is running");
 
 const app = {
     title: "Indecision App",
-    subtitle: "Let the app decide"
+    subtitle: "Let the app decide",
+    options: ['One', 'Two']
 }
 
 const template = (
     <div>
         <h1>{app.title}</h1>
-        <p>{app.subtitle}</p>
+        {app.subtitle && <p>{app.subtitle}</p>}
+        <p>{app.options.length > 0 ? "Here are your options" : "You have no options"}</p>
     </div>
 );
 
@@ -29,11 +31,11 @@ function getLocation(location) {
 const template2 = (
     <div>
         <h1>{user.name ? user.name : "Anonymous"}</h1>
-        <p>Age: {user.age}</p>
+        <p>Age: {user.age && user.age > 18 ? user.age : "under aged"}</p>
         {getLocation(user.location)}
     </div>
 )
 
 const appRoot = document.getElementById("app");
 
-ReactDOM.render(template2, appRoot);
+ReactDOM.render(template, appRoot);

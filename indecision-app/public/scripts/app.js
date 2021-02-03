@@ -6,7 +6,8 @@ console.log("app is running");
 
 var app = {
     title: "Indecision App",
-    subtitle: "Let the app decide"
+    subtitle: "Let the app decide",
+    options: ['One', 'Two']
 };
 
 var template = React.createElement(
@@ -17,10 +18,15 @@ var template = React.createElement(
         null,
         app.title
     ),
-    React.createElement(
+    app.subtitle && React.createElement(
         "p",
         null,
         app.subtitle
+    ),
+    React.createElement(
+        "p",
+        null,
+        app.options.length > 0 ? "Here are your options" : "You have no options"
     )
 );
 
@@ -53,11 +59,11 @@ var template2 = React.createElement(
         "p",
         null,
         "Age: ",
-        user.age
+        user.age && user.age > 18 ? user.age : "under aged"
     ),
     getLocation(user.location)
 );
 
 var appRoot = document.getElementById("app");
 
-ReactDOM.render(template2, appRoot);
+ReactDOM.render(template, appRoot);
