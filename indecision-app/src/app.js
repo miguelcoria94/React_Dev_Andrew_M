@@ -12,13 +12,21 @@ const template = (
         </ol>
     </div>
 );
-const username = "Arianna Harwell"
+
+const user = {
+    name: 'Miky',
+    age: 25,
+    location: "Houston"
+}
+const userName = "Miguel Coria";
+const userAge = 25;
+const userLocation = "Houston, TX";
 
 const template2 = (
     <div>
-        <h1>{username}</h1>
-        <p>Age: 25</p>
-        <p>Location: Houston, Tx</p>
+        <h1>{user.name}</h1>
+        <p>Age: {user.age}</p>
+        <p>Location: {user.location}</p>
     </div>
 )
 
