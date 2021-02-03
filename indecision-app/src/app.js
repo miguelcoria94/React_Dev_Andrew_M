@@ -15,13 +15,12 @@ const template = (
 );
 
 const user = {
-    name: 'Miky',
+    name: 'Miguel Coria',
     age: 25,
     location: "Houston"
 }
-const userName = "Miguel Coria";
-const userAge = 25;
-const userLocation = "Houston, TX";
+
+
 
 const template2 = (
     <div>
@@ -33,4 +32,4 @@ const template2 = (
 
 const appRoot = document.getElementById("app");
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(template2, appRoot);

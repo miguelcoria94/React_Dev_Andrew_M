@@ -25,13 +25,10 @@ var template = React.createElement(
 );
 
 var user = {
-    name: 'Miky',
+    name: 'Miguel Coria',
     age: 25,
     location: "Houston"
 };
-var userName = "Miguel Coria";
-var userAge = 25;
-var userLocation = "Houston, TX";
 
 var template2 = React.createElement(
     "div",
@@ -57,4 +54,4 @@ var template2 = React.createElement(
 
 var appRoot = document.getElementById("app");
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(template2, appRoot);
