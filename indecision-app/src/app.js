@@ -17,10 +17,13 @@ const template = (
 const user = {
     name: 'Miguel Coria',
     age: 25,
-    location: "Houston"
+    location: "Houston, TX"
 }
 
-function getLocation() {
+function getLocation(location) {
+    if (location) {
+        return location
+    }
     return "Unknown";
 }
 
@@ -30,7 +33,7 @@ const template2 = (
     <div>
         <h1>{user.name}</h1>
         <p>Age: {user.age}</p>
-        <p>Location: {getLocation()}</p>
+        <p>Location: {getLocation(user.location)}</p>
     </div>
 )
 
