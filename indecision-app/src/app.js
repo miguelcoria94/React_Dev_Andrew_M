@@ -2,11 +2,12 @@ console.log("app is running");
 
 // JSX - Javascript XML
 
-const template =
+const template = (
     <div>
         <h1>Indecision App</h1>
         <p>This is some info</p>
-    </div>;
+    </div>
+);
 
 const appRoot = document.getElementById("app");
 
