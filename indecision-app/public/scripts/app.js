@@ -34,44 +34,48 @@ var count = 0;
 
 var addOne = function addOne() {
     count++;
-    console.log(count);
+    renderCount();
 };
 
 var minusOne = function minusOne() {
     count--;
-    console.log(count);
+    renderCount();
 };
 
 var resetOne = function resetOne() {
     count = 0;
-    console.log(count);
+    renderCount();
 };
 
-var counter = React.createElement(
-    "div",
-    null,
-    React.createElement(
-        "h1",
-        null,
-        "Count: ",
-        count
-    ),
-    React.createElement(
-        "button",
-        { id: "my-id-1", className: "button", onClick: addOne },
-        "plus one"
-    ),
-    React.createElement(
-        "button",
-        { id: "my-id-2", className: "button", onClick: minusOne },
-        "minus one"
-    ),
-    React.createElement(
-        "button",
-        { id: "my-id-3", className: "button", onClick: resetOne },
-        "reset count"
-    )
-);
 var appRoot = document.getElementById("app");
 
-ReactDOM.render(counter, appRoot);
+var renderCount = function renderCount() {
+    var counter = React.createElement(
+        "div",
+        null,
+        React.createElement(
+            "h1",
+            { id: "count" },
+            "Count: ",
+            count
+        ),
+        React.createElement(
+            "button",
+            { id: "my-id-1", className: "button", onClick: addOne },
+            "plus one"
+        ),
+        React.createElement(
+            "button",
+            { id: "my-id-2", className: "button", onClick: minusOne },
+            "minus one"
+        ),
+        React.createElement(
+            "button",
+            { id: "my-id-3", className: "button", onClick: resetOne },
+            "reset count"
+        )
+    );
+    ReactDOM.render(counter, appRoot);
+};
+
+renderCount();

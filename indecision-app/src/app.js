@@ -18,37 +18,42 @@ const template = (
 
 let count = 0;
 
+
 const addOne = () => {
-    count ++
-    console.log(count)
+    count++
+    renderCount()
 }
 
 const minusOne = () => {
     count --
-    console.log(count);
+    renderCount()
 };
 
 const resetOne = () => {
     count = 0
-    console.log(count);
+    renderCount()
 };
 
 
 
-const counter = (
-  <div>
-    <h1>Count: {count}</h1>
-    <button id="my-id-1" className="button" onClick={addOne}>
-      plus one
-    </button>
-    <button id="my-id-2" className="button" onClick={minusOne}>
-      minus one
-    </button>
-    <button id="my-id-3" className="button" onClick={resetOne}>
-      reset count
-    </button>
-  </div>
-);
 const appRoot = document.getElementById("app");
 
-ReactDOM.render(counter, appRoot);
+const renderCount = () => {
+    const counter = (
+      <div>
+        <h1 id="count">Count: {count}</h1>
+        <button id="my-id-1" className="button" onClick={addOne}>
+          plus one
+        </button>
+        <button id="my-id-2" className="button" onClick={minusOne}>
+          minus one
+        </button>
+        <button id="my-id-3" className="button" onClick={resetOne}>
+          reset count
+        </button>
+      </div>
+    );
+    ReactDOM.render(counter, appRoot);
+}
+
+renderCount()
