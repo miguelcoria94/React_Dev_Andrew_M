@@ -21,8 +21,9 @@ let count = 0;
 const counter = (
     <div>
         <h1>Count: {count}</h1>
+        <button id="my-id" className="button">plus one</button>
     </div>
 )
 const appRoot = document.getElementById("app");
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(counter, appRoot);

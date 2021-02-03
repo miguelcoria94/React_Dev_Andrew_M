@@ -40,8 +40,13 @@ var counter = React.createElement(
         null,
         "Count: ",
         count
+    ),
+    React.createElement(
+        "button",
+        { id: "my-id", className: "button" },
+        "plus one"
     )
 );
 var appRoot = document.getElementById("app");
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(counter, appRoot);
