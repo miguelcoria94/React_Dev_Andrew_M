@@ -30,6 +30,18 @@ var template = React.createElement(
     )
 );
 
+var count = 0;
+
+var counter = React.createElement(
+    "div",
+    null,
+    React.createElement(
+        "h1",
+        null,
+        "Count: ",
+        count
+    )
+);
 var appRoot = document.getElementById("app");
 
 ReactDOM.render(template, appRoot);

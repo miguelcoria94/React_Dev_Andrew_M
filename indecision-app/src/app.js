@@ -16,6 +16,13 @@ const template = (
     </div>
 );
 
+let count = 0;
+
+const counter = (
+    <div>
+        <h1>Count: {count}</h1>
+    </div>
+)
 const appRoot = document.getElementById("app");
 
 ReactDOM.render(template, appRoot);
