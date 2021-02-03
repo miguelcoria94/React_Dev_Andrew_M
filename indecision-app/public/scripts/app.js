@@ -10,6 +10,10 @@ var app = {
     options: ['One', 'Two']
 };
 
+var submitForm = function submitForm(e) {
+    e.preventDefault();
+};
+
 var template = React.createElement(
     "div",
     null,
@@ -27,7 +31,18 @@ var template = React.createElement(
         "p",
         null,
         app.options.length > 0 ? "Here are your options" : "You have no options"
+    ),
+    React.createElement(
+        "form",
+        { onSubmit: submitForm },
+        React.createElement("input", { type: "text", name: "option" }),
+        React.createElement(
+            "button",
+            { type: "submit" },
+            "Add Option"
+        )
     )
 );
 
-ReactDOM.render(counter, appRoot);
+var appRoot = document.querySelector("#app");
+ReactDOM.render(template, appRoot);
