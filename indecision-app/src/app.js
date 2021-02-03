@@ -13,6 +13,14 @@ const template = (
     </div>
 );
 
+const template2 = (
+    <div>
+        <h1>Miguel Coria</h1>
+        <p>Age: 25</p>
+        <p>Location: Houston, Tx</p>
+    </div>
+)
+
 const appRoot = document.getElementById("app");
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(template2, appRoot);
