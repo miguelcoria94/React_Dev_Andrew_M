@@ -1,10 +1,14 @@
-console.log("app is running")
+"use strict";
 
-
+console.log("app is running");
 
 // JSX - Javascript XML
 
-const template = <p>This is JSX from app.js!</p>;
-const appRoot = document.getElementById("app")
+var template = React.createElement(
+  "p",
+  null,
+  "This is JSX from app.js!"
+);
+var appRoot = document.getElementById("app");
 
-ReactDOM.render(template, appRoot)
+ReactDOM.render(template, appRoot);
