@@ -27,8 +27,6 @@ function getLocation(location) {
     return "Unknown";
 }
 
-
-
 const template2 = (
     <div>
         <h1>{user.name}</h1>
