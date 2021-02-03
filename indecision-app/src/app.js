@@ -2,14 +2,15 @@ console.log("app is running");
 
 // JSX - Javascript XML
 
+const app = {
+    title: "Indecision App",
+    subtitle: "Let the app decide"
+}
+
 const template = (
     <div>
-        <h1>Miguel Coria</h1>
-        <p>This is some info</p>
-        <ol>
-            <li>Item One</li>
-            <li>Item two</li>
-        </ol>
+        <h1>{app.title}</h1>
+        <p>{app.subtitle}</p>
     </div>
 );
 
@@ -32,4 +33,4 @@ const template2 = (
 
 const appRoot = document.getElementById("app");
 
-ReactDOM.render(template2, appRoot);
+ReactDOM.render(template, appRoot);
