@@ -4,7 +4,7 @@ console.log("app is running");
 
 const template = (
     <div>
-        <h1>Indecision App</h1>
+        <h1>Miguel Coria</h1>
         <p>This is some info</p>
         <ol>
             <li>Item One</li>
