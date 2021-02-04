@@ -21,6 +21,13 @@ var submitForm = function submitForm(e) {
     }
 };
 
+var removeAll = function removeAll() {
+    for (var i = app.options.length - 1; i >= 0; i--) {
+        app.options.pop();
+    }
+    renderApp();
+};
+
 var renderApp = function renderApp() {
     var template = React.createElement(
         "div",
@@ -40,6 +47,18 @@ var renderApp = function renderApp() {
             null,
             app.options.length > 0 ? "Here are your options" : "You have no options"
         ),
+        React.createElement(
+            "button",
+            { onClick: removeAll },
+            "Remove All"
+        ),
+        app.options.map(function (el) {
+            return React.createElement(
+                "p",
+                null,
+                el
+            );
+        }),
         React.createElement(
             "p",
             null,

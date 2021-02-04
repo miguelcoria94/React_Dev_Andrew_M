@@ -19,6 +19,13 @@ const submitForm = (e) => {
     }
 }
 
+const removeAll = () => {
+    for (let i = app.options.length - 1; i >= 0; i--){
+        app.options.pop()
+    }
+    renderApp();
+}
+
 const renderApp = () => {
     const template = (
       <div>
@@ -28,7 +35,13 @@ const renderApp = () => {
           {app.options.length > 0
             ? "Here are your options"
             : "You have no options"}
-        </p>
+            </p>
+            <button onClick={removeAll}>
+                Remove All
+            </button>
+            {app.options.map(el => {
+                return <p>{el}</p>
+            })}
         <p>{app.options.length}</p>
         <form onSubmit={submitForm}>
           <input type="text" name="option"></input>
