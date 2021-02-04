@@ -28,6 +28,7 @@ const removeAll = () => {
 
 const makeDecision = () => {
     const randNum = Math.floor(Math.random() * app.options.length)
+    const option = app.options[randNum]
     console.log(randNum)
 }
 
@@ -41,7 +42,7 @@ const renderApp = () => {
             ? "Here are your options"
             : "You have no options"}
             </p>
-            <button onClick={makeDecision}>What should I do?</button>
+            <button disabled={app.options.length === 0} onClick={makeDecision}>What should I do?</button>
             <button onClick={removeAll}>
                 Remove All
             </button>
