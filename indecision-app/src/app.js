@@ -26,6 +26,11 @@ const removeAll = () => {
     renderApp();
 }
 
+const makeDecision = () => {
+    const randNum = Math.floor(Math.random() * app.options.length)
+    console.log(randNum)
+}
+
 const renderApp = () => {
     const template = (
       <div>
@@ -36,13 +41,13 @@ const renderApp = () => {
             ? "Here are your options"
             : "You have no options"}
             </p>
+            <button onClick={makeDecision}>What should I do?</button>
             <button onClick={removeAll}>
                 Remove All
             </button>
-            {app.options.map(el => {
-                return <p>{el}</p>
+            {app.options.map((el, idx) => {
+                return <p key={idx}>{el}</p>
             })}
-        <p>{app.options.length}</p>
         <form onSubmit={submitForm}>
           <input type="text" name="option"></input>
           <button type="submit">Add Option</button>
